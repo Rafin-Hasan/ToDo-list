@@ -1,0 +1,6 @@
+.navbar {
+  @apply flex justify-center gap-14 pt-10;
+}
+.navbar a {
+  @apply font-poppins font-bold text-white text-2xl;
+}
