@@ -4,13 +4,14 @@
   @apply flex justify-center;
 }
 .input input {
-  @apply w-[500px] mt-10 p-4 rounded-full font-poppins text-center shadow-lg;
+  @apply w-full sm:w-[500px] mt-10 p-4 rounded-full font-poppins text-center shadow-lg;
 }
 .btn {
   @apply bg-white text-sky-500 py-2 px-4 mt-3 mb-24 font-poppins font-semibold rounded-[20px] shadow-xl active:scale-95;
 }
 .tasks-div {
-  @apply flex flex-col justify-center items-center mb-48;
+  @apply flex flex-col justify-center items-center mb-48 px-4 sm:px-8 md:px-16;
+  /* Added responsive padding for left and right on smaller screens */
 }
 .tasks-div h3 {
   @apply font-poppins mb-3 text-white text-[30px];
@@ -19,7 +20,7 @@
   @apply text-red-600;
 }
 .tasks {
-  @apply bg-white rounded-[20px] p-4 w-fit mb-2;
+  @apply bg-white rounded-[20px] p-4 w-full sm:w-fit mb-2;
   opacity: 0; /* Start hidden */
   transform: translateY(20px); /* Initial position for smooth entry */
   animation: fadeInUp 0.6s ease forwards;
