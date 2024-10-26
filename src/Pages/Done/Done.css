@@ -1,0 +1,75 @@
+/* Done.css */
+
+.done-wrapper {
+  @apply flex justify-center items-center min-h-screen p-4;
+}
+
+.done-content {
+  @apply flex justify-between items-center w-full max-w-6xl;
+}
+
+.done-animation {
+  @apply flex justify-center items-center w-1/2;
+}
+
+.done-lottie {
+  width: 100%;
+  max-width: 500px;
+}
+
+.done-tasks-container {
+  @apply flex flex-col justify-start w-full max-w-sm;
+}
+
+.done-title {
+  @apply font-poppins text-4xl text-white mb-4 font-bold; /* Reduced margin */
+}
+
+.done-count {
+  @apply text-blue-500;
+}
+
+.done-tasks-list {
+  @apply space-y-3;
+}
+
+.done-task {
+  @apply flex justify-between items-center bg-white p-3 rounded-full shadow-md;
+  opacity: 0; /* Start hidden */
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animation delays */
+.done-task[data-index="0"] {
+  animation-delay: 0.2s;
+}
+.done-task[data-index="1"] {
+  animation-delay: 0.4s;
+}
+.done-task[data-index="2"] {
+  animation-delay: 0.6s;
+}
+.done-task[data-index="3"] {
+  animation-delay: 0.8s;
+}
+
+/* Keyframe animation for fading and sliding tasks in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.done-task-name {
+  @apply text-gray-800 font-semibold;
+}
+
+.done-task-timestamp {
+  @apply text-gray-500 text-sm;
+}
